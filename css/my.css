@@ -1,0 +1,51 @@
+#services .span3 {
+    padding: 25px 6px;
+    cursor: pointer;
+    height: 290px;
+}
+
+#services .span3:hover {
+    background: #3a3a3a;
+    color: #fff;
+    padding: 25px 10px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+}
+
+.responsive-image {
+  height: auto;
+  width: 85%;
+}
+
+.enlarge {
+    -webkit-transition: all 1s ease; /* Safari and Chrome */
+    -moz-transition: all 1s ease; /* Firefox */
+    -o-transition: all 1s ease; /* IE 9 */
+    -ms-transition: all 1s ease; /* Opera */
+    transition: all 1s ease;
+}
+
+.enlarge:hover {
+    -webkit-transform:scale(1.25); /* Safari and Chrome */
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* IE 9 */
+    -o-transform:scale(1.25); /* Opera */
+    transform:scale(1.25);
+}
+.overlay {
+  background-color: #000000;
+  opacity: 0.5;
+}
+h2 {
+  font-size: 4.0vh;
+}
+p {
+  font-size: 2.3vmin;
+}
