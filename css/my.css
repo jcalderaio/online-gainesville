@@ -39,13 +39,9 @@
     -o-transform:scale(1.25); /* Opera */
     transform:scale(1.25);
 }
-.overlay {
-  background-color: #000000;
-  opacity: 0.5;
-}
 h2 {
   font-size: 4.0vh;
 }
 p {
-  font-size: 2.3vmin;
+  font-size: 2.8vmin;
 }
