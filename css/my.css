@@ -39,9 +39,11 @@
     -o-transform:scale(1.25); /* Opera */
     transform:scale(1.25);
 }
+/* 
 h2 {
   font-size: 4.0vh;
 }
 p {
   font-size: 2.8vmin;
 }
+*/
