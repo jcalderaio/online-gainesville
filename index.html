@@ -18,6 +18,7 @@
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
     <!-- Plugin CSS -->
     <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
@@ -28,6 +29,12 @@
     <!-- Custom CSS -->
     <link href="css/my.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
+
+    <!-- Portfolio Materialize-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css">
+
+    <!-- Portfolio Styles-->
+    <link rel="stylesheet" href="css/materialize-fix.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -40,12 +47,11 @@
 
 <body id="page-top">
 
-
     <!-- Navbar STARTS here-->
+    <!-- This is the Bootstrap Navbar
 
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
@@ -54,7 +60,6 @@
                 </a>
             </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
@@ -71,13 +76,37 @@
                     </li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
+
         </div>
-        <!-- /.container-fluid -->
+
+    </nav>
+-->
+
+    <!-- This is materializes navbar and so the menu does not work on mobile -->
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <a href="#" class="brand-logo">
+              <img src="img/orangeLogo.png" height="40px" style="position: relative; bottom: 9px">
+          </a>
+          <ul class="right hide-on-med-and-down nav navbar-nav navbar-right">
+              <li>
+                  <a class="page-scroll" href="#about">About</a>
+              </li>
+              <li>
+                  <a class="page-scroll" href="#services">Services</a>
+              </li>
+              <li>
+                  <a class="page-scroll" href="#portfolio">Portfolio</a>
+              </li>
+              <li>
+                  <a class="page-scroll" href="#contact">Contact</a>
+              </li>
+          </ul>
+        </div>
     </nav>
 
     <!-- Navbar ENDS here -->
-
 
 
     <header>
@@ -86,9 +115,11 @@
                 <div>
                     <img id="mainLogo" style="display: block; margin: 0 auto;" src="img/orangeLogo.png" border="0" alt="Null" width="65%" height="auto" class="animated bounceInLeft shadowed">
 
-                    <h2 id="homeHeading" class="animated bounceInRight">Our team can help you build better websites so your company can grow! Just give us a call or email!</h2>
+                    <h3 id="homeHeading" class="animated bounceInRight shadowed">Our team can help you build better websites so your company can grow! Just give us a call or email!</h3>
                     <hr>
-                    <a href="#about" class="btn btn-default btn-xl page-scroll enlarge">Find Out More</a>
+                    <!--
+                    <a href="#about" class="btn btn-default btn-xl page-scroll enlarge">Find Out More</a> -->
+                    <a href="#about" class="button blue page-scroll">Find Out More</a>
                 </div>
             </div>
 
@@ -111,13 +142,16 @@
                 </div>
             </div>
             <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h2 class="section-heading">About the CEO</h2>
+                <h2 class="section-heading shadowed">About the CEO</h2>
                 <hr class="light">
                 <p>Hello, my name is John Calderaio and I am the CEO of Online Gainesville, Alachua's
                 premiere website designer. I graduated from the University of Florida with a bachelor's degree in
                 Computer Science with a 3.9 GPA and Summa Cum Laude Honors.</p>
                 <hr class="light" />
-                <a href="#services" class="btn btn-default btn-xl page-scroll enlarge">What We Offer</a>
+                <!-- <a href="#services" class="btn btn-default btn-xl page-scroll enlarge">What We Offer</a> -->
+                <a href="#services" class="button white page-scroll">
+                    What We Offer
+                </a>
             </div>
         </div>
     </section>
@@ -137,12 +171,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">At Your Service</h2>
+                    <h2 class="section-heading shadowed">At Your Service</h2>
                     <hr class="primary">
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="container" style="width: 95%">
             <div class="row">
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
@@ -155,7 +189,7 @@
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
                         <i class="fa fa-4x fa-usd text-primary sr-icons shadowed"></i>
-                        <h3>Premium websites with everything included at bargain costs</h3>
+                        <h3>Quality at a Bargain</h3>
                         <p class="text-muted">At Online Gainesville, we believe that individuals of all economic statures should
                             be able to afford real results. Let Gainesville's number one developer help you discover your
                             potential.</p>
@@ -187,102 +221,153 @@
 
     <!-- Portfolio Start's Here -->
 
-    <section class="no-padding" id="portfolio">
-        <div class="container-fluid">
-            <div class="row no-gutter popup-gallery">
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/1.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+    <section id="portfolio" class="section scrollspy bg-primary">
+        <div class="col-lg-8 col-lg-offset-2 text-center" style="padding-top:50px">
+            <h2 class="section-heading shadowed">Portfolio</h2>
+            <hr class="star-light">
+            <hr class="light">
+        </div>
+        <div class="container">
+
+            <!-- Row 1 -->
+            <div class="row" style="padding-top:20px">
+            <!-- Code Island-->
+                <div class="col-md-4">
+                  <div class="card medium">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img src="static/img/code-island.jpg" class="activator">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator teal-text hoverline">
+                            Code Island
+                            <i class="mdi-navigation-more-vert right"></i>
+                        </span>
+                      <p class="black-text">Online headquarters for the local Code for America brigade in Rhode Island.</p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title brown-text">
+                            Accomplishments
+                            <i class="mdi-navigation-close right"></i>
+                        </span>
+                        <span class="black-text">
+                            <ul>
+                              <li>Integrated “Next Meeting” via <strong>Meetup API</strong></li>
+                              <li>Developed <strong>CSS and JS</strong> responsive menu</li>
+                              <li>Created member list via <strong>GitHub API</strong></li>
+                              <li>Refreshed branding and layout</li>
+                              <li>Refactored all existing code (<strong>Jekyll</strong>)</li>
+                            </ul>
+                        </span>
+                      <div class="card-action">
+                          <a href="http://code-island.org" target="_blank" data-position="top" data-tooltip="View Online" class="btn-floating btn-large waves-effect waves-light brown tooltipped">
+                              <i class="fa fa-external-link"></i>
+                          </a>
+                          <a href="http://github.com/andrewborstein/code-island.org" target="_blank" data-position="top" data-tooltip="View Source" class="btn-floating btn-large waves-effect waves-light brown tooltipped">
+                              <i class="fa fa-github"></i>
+                          </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/2.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/2.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+                <!-- Saved By the Text-->
+                <div class="col-md-4">
+                  <div class="card medium">
+                    <div class="card-image waves-effect waves-block waves-light"><img src="static/img/saved-by-the-text.jpg" class="activator"></div>
+                    <div class="card-content"><span class="card-title activator teal-text hoverline">Saved By the Text<i class="mdi-navigation-more-vert right"></i></span>
+                      <p>Fun, TV nostalgia-themed app that sends an MMS to a user's phone number.</p>
+                    </div>
+                    <div class="card-reveal"><span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span>
+                      <ul>
+                        <li>Built with Ruby on <strong>Rails</strong></li>
+                        <li>Integrated <strong>Twilio API</strong></li>
+                        <li>Designed in <strong>Bootstrap</strong></li>
+                        <li><strong>Javascript</strong> input validation</li>
+                      </ul>
+                      <div class="card-action"><a href="http://savedbythetext.herokuapp.com" target="_blank" data-position="top" data-tooltip="View Online" class="btn-floating btn-large waves-effect waves-light brown tooltipped"><i class="fa fa-external-link"></i></a><a href="http://github.com/andrewborstein/saved-by-the-text" target="_blank" data-position="top" data-tooltip="View Source" class="btn-floating btn-large waves-effect waves-light brown tooltipped"><i class="fa fa-github"></i></a></div>
+                    </div>
+                  </div>
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/3.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/3.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/4.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/4.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/5.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/5.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/6.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/6.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+                <!-- Skate Something-->
+                <div class="col-md-4">
+                  <div class="card medium">
+                    <div class="card-image waves-effect waves-block waves-light"><img src="static/img/skate-something.jpg" class="activator"></div>
+                    <div class="card-content"><span class="card-title activator teal-text hoverline">Skate Something<i class="mdi-navigation-more-vert right"></i></span>
+                      <p>Mobile-focused web app where users can explore, collect, and share skate spots.</p>
+                    </div>
+                    <div class="card-reveal"><span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span>
+                      <ul>
+                        <li>Front-end development in <strong>Bootstrap</strong></li>
+                        <li>Contributed creative strategy and UX</li>
+                        <li>Built dynamic templates using <strong>Jade</strong></li>
+                        <li>Worked with <strong>MVC</strong> framework, <strong>Node</strong> server</li>
+                      </ul>
+                      <div class="card-action"><a href="http://skatesomething.com" data-position="top" data-tooltip="View Online" class="btn-floating btn-large waves-effect waves-light brown tooltipped"><i class="fa fa-external-link"></i></a><a href="#" data-position="top" data-tooltip="Source is Private" class="btn-floating btn-large waves-effect waves-light brown tooltipped"><i class="fa fa-github"></i></a></div>
+                    </div>
+                  </div>
                 </div>
             </div>
+
+            <!-- Row 2 -->
+            <div class="row">
+                <!-- RI WiFi-->
+                <div class="col-md-4">
+                  <div class="card medium">
+                    <div class="card-image waves-effect waves-block waves-light"><img src="static/img/ri-wifi.jpg" class="activator"></div>
+                    <div class="card-content"><span class="card-title activator teal-text hoverline">RI WiFi<i class="mdi-navigation-more-vert right"></i></span>
+                      <p>Sortable database of WiFi-enabled spots with details for laptop users. </p>
+                    </div>
+                    <div class="card-reveal"><span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span>
+                      <ul>
+                        <li>Ruby on <strong>Rails</strong> &amp; <strong>Bootstrap</strong></li>
+                        <li><strong>Google Maps API</strong></li>
+                        <li>Native Javascript <strong>geolocation</strong></li>
+                        <li><strong>Dynamic CSS</strong> color coding</li>
+                      </ul>
+                      <div class="card-action"><a href="http://ri-wifi.herokuapp.com" target="_blank" data-position="top" data-tooltip="View Online" class="btn-floating btn-large waves-effect waves-light brown tooltipped"><i class="fa fa-external-link"></i></a><a href="http://github.com/andrewborstein/ri-wifi" target="_blank" data-position="top" data-tooltip="View Source" class="btn-floating btn-large waves-effect waves-light brown tooltipped"><i class="fa fa-github"></i></a></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Pinterest-->
+                <div class="col-md-4">
+                  <div class="card medium">
+                    <div class="card-image waves-effect waves-block waves-light"><img src="static/img/pinteresting.jpg" class="activator"></div>
+                    <div class="card-content"><span class="card-title activator teal-text hoverline">Pinteresting<i class="mdi-navigation-more-vert right"></i></span>
+                      <p>Lite Pinterest clone, where users can 'pin' photos, especially those of cats.</p>
+                    </div>
+                    <div class="card-reveal"><span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span>
+                      <ul>
+                        <li>Ruby on <strong>Rails</strong> &amp; <strong>Bootstrap</strong></li>
+                        <li>Image upload with <strong>AWS</strong></li>
+                        <li><strong>jQuery</strong> Masonry effect</li>
+                        <li>User Authentication with <strong>Devise</strong></li>
+                      </ul>
+                      <div class="card-action"><a href="http://asb-pinteresting.herokuapp.com" target="_blank" data-position="top" data-tooltip="View Online" class="btn-floating btn-large waves-effect waves-light brown tooltipped"><i class="fa fa-external-link"></i></a><a href="http://github.com/andrewborstein/pinteresting" target="_blank" data-position="top" data-tooltip="View Source" class="btn-floating btn-large waves-effect waves-light brown tooltipped"><i class="fa fa-github"></i></a></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Shelter Finder-->
+                <div class="col-md-4">
+                  <div class="card medium">
+                    <div class="card-image waves-effect waves-block waves-light"><img src="static/img/shelter-finder.jpg" class="activator"></div>
+                    <div class="card-content"><span class="card-title activator teal-text hoverline">Shelter Finder<i class="mdi-navigation-more-vert right"></i></span>
+                      <p>Web app that helps Boston teens find the nearest available short-term housing.</p>
+                    </div>
+                    <div class="card-reveal"><span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span>
+                      <ul>
+                        <li>Ruby on <strong>Rails</strong> backend API</li>
+                        <li><strong>AJAX</strong> query of Rails <strong>JSON</strong></li>
+                        <li>Custom <strong>Google Maps API</strong> integration</li>
+                        <li>Automatic location/distance calculation</li>
+                      </ul>
+                      <div class="card-action"><a href="http://shelterfinder.herokuapp.com" target="_blank" data-position="top" data-tooltip="View Online" class="btn-floating btn-large waves-effect waves-light brown tooltipped"><i class="fa fa-external-link"></i></a><a href="http://github.com/andrewborstein/youth-shelter-finder" target="_blank" data-position="top" data-tooltip="View Source" class="btn-floating btn-large waves-effect waves-light brown tooltipped"><i class="fa fa-github"></i></a></div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
         </div>
     </section>
+
      <!-- Portfolio End's Here -->
 
      <!-- Start contact Div -->
@@ -291,7 +376,7 @@
          <div class="container">
              <div class="row">
                  <div class="col-lg-8 col-lg-offset-2 text-center">
-                     <h2 class="section-heading">Contact us today!</h2>
+                     <h2 class="section-heading shadowed">Contact us today!</h2>
                      <hr class="primary">
                      <p>Ready to start your next project with us? That's great! Give us a call or send us an email and we
                          will get back to you as soon as possible!</p>
@@ -301,8 +386,8 @@
                      <p>561-339-8182</p>
                  </div>
                  <div class="col-lg-4 text-center">
-                     <i class="fa fa-envelope-o fa-3x sr-contact shadowed"></i>
-                     <p><a href="mailto:info@OnlineGainesville.com">info@OnlineGainesville.com</a></p>
+                     <i class="fa fa-envelope-o fa-3x sr-contact shadowed" style="padding-bottom:6px"></i>
+                     <p><a href="mailto:Info@OnlineGainesville.com">Info@OnlineGainesville.com</a></p>
                  </div>
              </div>
          </div>
@@ -316,8 +401,11 @@
     <section class="bg-primary">
         <div class="container">
             <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h2 class="section-heading">Send us a message!</h2>
+                <h2 class="section-heading shadowed">OR...</h2>
+                <h2 class="section-heading shadowed">Send us a message!</h2>
                 <hr class="light">
+                <br />
+                <br />
             </div>
 
             <!-- Start Form -->
@@ -363,12 +451,13 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="form_message">Message *</label>
-                                <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+                                <textarea id="form_message" name="message" class="form-control" placeholder="Please enter your message *" rows="4" required="required" data-error="Please,leave us a message."></textarea>
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
                         <div class="col-md-12" style="text-align: center">
-                            <input type="submit" class="page-scroll btn btn-default btn-xl sr-button enlarge btn-send" value="Send message">
+                            <input type="submit" class="button white page-scroll sr-button btn-send" value="Send message">
+                            <i class="material-icons right">send</i>
                         </div>
                     </div>
                     <br />
@@ -404,6 +493,16 @@
 
     <!-- Theme JavaScript -->
     <script src="js/creative.min.js"></script>
+
+    <!-- Materialize - Compiled and minified JavaScript-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js"></script>
+    <script>
+      // Materialize - Initializers
+      $(document).ready(function(){
+        $('.scrollspy').scrollSpy();
+        // Initialize collapse button
+      });
+    </script>
 
     <!-- Contact Form Validator -->
     <script src="js/validator.js"></script>

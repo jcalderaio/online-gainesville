@@ -1,0 +1,7 @@
+-I changed out the nabber from the bootstrap to materialize
+
+-I changed buttons and added new CSS rules to bottom of my.css for buttons
+
+-I added portfolio thing
+
+-I need to fix contact form
