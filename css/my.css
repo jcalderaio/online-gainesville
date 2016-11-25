@@ -89,7 +89,7 @@ p {
 */
 
 
-/* Next is the only button CSS I use*/
+/* ONLY use BUTTON! Not btn, because bootstrap and materialize crash */
 
 .button {
   display: inline-block;
