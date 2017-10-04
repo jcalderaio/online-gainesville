@@ -1,46 +1,52 @@
 <?php
 
-// configure
-$from = 'info@OnlineGainesville.com';
-$sendTo = 'jcalderaio@gmail.com';
-$subject = 'New message from "www.OnlineGainesvill.com" contact form';
-$fields = array('name' => 'Name', 'surname' => 'Surname', 'phone' => 'Phone', 'email' => 'Email', 'message' => 'Message'); // array variable name => Text to appear in email
-$okMessage = 'Contact form successfully submitted. Thank you, I will get back to you soon!';
-$errorMessage = 'There was an error while submitting the form. Please try again later';
+// if the url field is empty
+if(isset($_POST['url']) && $_POST['url'] == ''){
 
-// let's do the sending
+	// put your email address here
+	$youremail = 'Info@OnlineGainesville.com';
 
-try
-{
-    $emailText = "";
+	// prepare a "pretty" version of the message
+	// Important: if you added any form fields to the HTML, you will need to add them here also
+	$body = "This is the form that was just submitted:
+	Firsname:  $_POST[name]
+	Lastname: $_POST[surname]
+	E-Mail: $_POST[email]
+	Phone: $_POST[phone]
+	Message: $_POST[message]";
 
-    foreach ($_POST as $key => $value) {
+	// Use the submitters email if they supplied one
+	// (and it isn't trying to hack your form).
+	// Otherwise send from your email address.
+	if($_POST["message"] != "" && $_POST["name"] != "") {
+		if( $_POST['email'] && !preg_match( "/[\r\n]/", $_POST['email']) ) {
+		  $headers = "From: $_POST[email]";
+		} else {
+		  $headers = "From: $youremail";
+		}
 
-        if (isset($fields[$key])) {
-            $emailText .= "$fields[$key]: $value\n";
-        }
-    }
+		// finally, send the message
+		mail($youremail, 'Contact Form', $body, $headers );
+		header( "refresh:3; url=index.html" );
+		echo "<!DOCTYPE HTML>
+		<html>
+		<head>
 
-    mail($sendTo, $subject, $emailText, "From: " . $from);
+		<title>Thanks!</title>
 
-    $responseArray = array('type' => 'success', 'message' => $okMessage);  //Displays success message to user
+		</head>
+		<body>
 
-    header( "refresh:3; url=index.html" );  // After 4 seconds, redirects to main website
+		<h1>Thanks</h1>
+		<h1>We'll get back to you as soon as possible.</h1>
+
+		</body>
+		</html>";
+	} else {
+		echo "<h1>Please press the back button and fill in all fields</h1>";
+	}
 }
-catch (\Exception $e)
-{
-    $responseArray = array('type' => 'danger', 'message' => $errorMessage);
 
-    header( "refresh:3; url=index.html" );
-}
+// otherwise, let the spammer think that they got their message through
 
-if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
-    $encoded = json_encode($responseArray);
-    
-    header('Content-Type: application/json');
-    
-    echo $encoded;
-}
-else {
-    echo $responseArray['message'];
-}
+?>
